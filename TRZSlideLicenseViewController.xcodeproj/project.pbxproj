@@ -21,6 +21,12 @@
 		2873969519015FAF003C27B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2873967719015FAF003C27B2 /* UIKit.framework */; };
 		2873969D19015FAF003C27B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2873969B19015FAF003C27B2 /* InfoPlist.strings */; };
 		2873969F19015FAF003C27B2 /* TRZSlideLicenseViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2873969E19015FAF003C27B2 /* TRZSlideLicenseViewControllerTests.m */; };
+		287396AB1901608F003C27B2 /* TRZSlideLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287396AA1901608F003C27B2 /* TRZSlideLicenseViewController.m */; };
+		287396AE19016754003C27B2 /* TRZSlideLicenseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 287396AD19016754003C27B2 /* TRZSlideLicenseScrollView.m */; };
+		287396B0190170A1003C27B2 /* TRZLicenseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287396AF190170A1003C27B2 /* TRZLicenseView.xib */; };
+		287396B319017400003C27B2 /* TRZLicenseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 287396B219017400003C27B2 /* TRZLicenseView.m */; };
+		28D890C21902BB92003792C1 /* Pods-TRZSlideLicenseViewController-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28D890C11902BB92003792C1 /* Pods-TRZSlideLicenseViewController-acknowledgements.plist */; };
+		C9EE92838F634EADBEDB2BCE /* libPods-TRZSlideLicenseViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D92330783A4499BB935B884 /* libPods-TRZSlideLicenseViewController.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D92330783A4499BB935B884 /* libPods-TRZSlideLicenseViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TRZSlideLicenseViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2873967019015FAF003C27B2 /* TRZSlideLicenseViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRZSlideLicenseViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2873967319015FAF003C27B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2873967519015FAF003C27B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +60,15 @@
 		2873969A19015FAF003C27B2 /* TRZSlideLicenseViewControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TRZSlideLicenseViewControllerTests-Info.plist"; sourceTree = "<group>"; };
 		2873969C19015FAF003C27B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2873969E19015FAF003C27B2 /* TRZSlideLicenseViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRZSlideLicenseViewControllerTests.m; sourceTree = "<group>"; };
+		287396A91901608F003C27B2 /* TRZSlideLicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZSlideLicenseViewController.h; sourceTree = "<group>"; };
+		287396AA1901608F003C27B2 /* TRZSlideLicenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZSlideLicenseViewController.m; sourceTree = "<group>"; };
+		287396AC19016754003C27B2 /* TRZSlideLicenseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZSlideLicenseScrollView.h; sourceTree = "<group>"; };
+		287396AD19016754003C27B2 /* TRZSlideLicenseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZSlideLicenseScrollView.m; sourceTree = "<group>"; };
+		287396AF190170A1003C27B2 /* TRZLicenseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRZLicenseView.xib; sourceTree = "<group>"; };
+		287396B119017400003C27B2 /* TRZLicenseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZLicenseView.h; sourceTree = "<group>"; };
+		287396B219017400003C27B2 /* TRZLicenseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZLicenseView.m; sourceTree = "<group>"; };
+		28D890C11902BB92003792C1 /* Pods-TRZSlideLicenseViewController-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-TRZSlideLicenseViewController-acknowledgements.plist"; sourceTree = "<group>"; };
+		E226C5E7B583448D95092C46 /* Pods-TRZSlideLicenseViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRZSlideLicenseViewController.xcconfig"; path = "Pods/Pods-TRZSlideLicenseViewController.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +79,7 @@
 				2873967619015FAF003C27B2 /* CoreGraphics.framework in Frameworks */,
 				2873967819015FAF003C27B2 /* UIKit.framework in Frameworks */,
 				2873967419015FAF003C27B2 /* Foundation.framework in Frameworks */,
+				C9EE92838F634EADBEDB2BCE /* libPods-TRZSlideLicenseViewController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,10 +99,12 @@
 		2873966719015FAF003C27B2 = {
 			isa = PBXGroup;
 			children = (
-				2873967919015FAF003C27B2 /* TRZSlideLicenseViewController */,
+				287396A819015FBA003C27B2 /* src */,
+				2873967919015FAF003C27B2 /* TRZSlideLicenseViewControllerDemo */,
 				2873969819015FAF003C27B2 /* TRZSlideLicenseViewControllerTests */,
 				2873967219015FAF003C27B2 /* Frameworks */,
 				2873967119015FAF003C27B2 /* Products */,
+				E226C5E7B583448D95092C46 /* Pods-TRZSlideLicenseViewController.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,11 +124,12 @@
 				2873967519015FAF003C27B2 /* CoreGraphics.framework */,
 				2873967719015FAF003C27B2 /* UIKit.framework */,
 				2873969219015FAF003C27B2 /* XCTest.framework */,
+				0D92330783A4499BB935B884 /* libPods-TRZSlideLicenseViewController.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2873967919015FAF003C27B2 /* TRZSlideLicenseViewController */ = {
+		2873967919015FAF003C27B2 /* TRZSlideLicenseViewControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
 				2873968219015FAF003C27B2 /* TRZAppDelegate.h */,
@@ -120,6 +140,7 @@
 				2873968B19015FAF003C27B2 /* Images.xcassets */,
 				2873967A19015FAF003C27B2 /* Supporting Files */,
 			);
+			name = TRZSlideLicenseViewControllerDemo;
 			path = TRZSlideLicenseViewController;
 			sourceTree = "<group>";
 		};
@@ -152,6 +173,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		287396A819015FBA003C27B2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				287396A91901608F003C27B2 /* TRZSlideLicenseViewController.h */,
+				287396AA1901608F003C27B2 /* TRZSlideLicenseViewController.m */,
+				287396AC19016754003C27B2 /* TRZSlideLicenseScrollView.h */,
+				287396AD19016754003C27B2 /* TRZSlideLicenseScrollView.m */,
+				287396B119017400003C27B2 /* TRZLicenseView.h */,
+				287396B219017400003C27B2 /* TRZLicenseView.m */,
+				287396AF190170A1003C27B2 /* TRZLicenseView.xib */,
+				28D890C11902BB92003792C1 /* Pods-TRZSlideLicenseViewController-acknowledgements.plist */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 287396A219015FAF003C27B2 /* Build configuration list for PBXNativeTarget "TRZSlideLicenseViewController" */;
 			buildPhases = (
+				03462F00E66D44FDB00D7D86 /* Check Pods Manifest.lock */,
 				2873966C19015FAF003C27B2 /* Sources */,
 				2873966D19015FAF003C27B2 /* Frameworks */,
 				2873966E19015FAF003C27B2 /* Resources */,
+				AB889F40ED1E4D2E813FB3ED /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +268,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2873968C19015FAF003C27B2 /* Images.xcassets in Resources */,
+				287396B0190170A1003C27B2 /* TRZLicenseView.xib in Resources */,
+				28D890C21902BB92003792C1 /* Pods-TRZSlideLicenseViewController-acknowledgements.plist in Resources */,
 				2873967E19015FAF003C27B2 /* InfoPlist.strings in Resources */,
 				2873968719015FAF003C27B2 /* Main.storyboard in Resources */,
 			);
@@ -245,12 +285,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03462F00E66D44FDB00D7D86 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AB889F40ED1E4D2E813FB3ED /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-TRZSlideLicenseViewController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2873966C19015FAF003C27B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2873968019015FAF003C27B2 /* main.m in Sources */,
+				287396B319017400003C27B2 /* TRZLicenseView.m in Sources */,
+				287396AE19016754003C27B2 /* TRZSlideLicenseScrollView.m in Sources */,
+				287396AB1901608F003C27B2 /* TRZSlideLicenseViewController.m in Sources */,
 				2873968A19015FAF003C27B2 /* TRZViewController.m in Sources */,
 				2873968419015FAF003C27B2 /* TRZAppDelegate.m in Sources */,
 			);
@@ -374,6 +450,7 @@
 		};
 		287396A319015FAF003C27B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E226C5E7B583448D95092C46 /* Pods-TRZSlideLicenseViewController.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -387,6 +464,7 @@
 		};
 		287396A419015FAF003C27B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E226C5E7B583448D95092C46 /* Pods-TRZSlideLicenseViewController.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -457,6 +535,7 @@
 				287396A419015FAF003C27B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		287396A519015FAF003C27B2 /* Build configuration list for PBXNativeTarget "TRZSlideLicenseViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +544,7 @@
 				287396A719015FAF003C27B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
