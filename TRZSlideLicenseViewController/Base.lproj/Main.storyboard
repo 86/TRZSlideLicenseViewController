@@ -54,7 +54,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ML-O6-T6G" customClass="TRZSlideLicenseScrollView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="nWk-s3-z6S" id="ZrF-iH-Aul"/>
