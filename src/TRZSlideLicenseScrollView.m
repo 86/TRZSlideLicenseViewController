@@ -36,6 +36,8 @@
 - (void)initScrollView {
     [self loadLicenses];
     self.pagingEnabled = YES;
+    self.bouncesZoom = NO;
+    
     self.contentSize = CGSizeMake(_licenses.count * self.frame.size.width, self.frame.size.height);
     for (int i = 0; i < _licenses.count; i++) {
         CGRect frame = CGRectMake(self.frame.size.width * i, 0, self.frame.size.width, self.frame.size.height);

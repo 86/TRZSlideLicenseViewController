@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="nWk-s3-z6S" kind="push" id="QLQ-42-EUt"/>
+                                    <segue destination="sZM-9Z-6oW" kind="push" id="g4V-qd-jd1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -36,46 +36,23 @@
             <point key="canvasLocation" x="483" y="146"/>
         </scene>
         <!--Slide License View Controller - Slide License View-->
-        <scene sceneID="of8-jk-BsE">
+        <scene sceneID="El2-j7-1YT">
             <objects>
-                <tableViewController id="nWk-s3-z6S" customClass="TRZSlideLicenseViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="400" sectionHeaderHeight="22" sectionFooterHeight="22" id="nqQ-aW-cRS">
+                <viewController id="sZM-9Z-6oW" customClass="TRZSlideLicenseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g0u-yr-TZ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="q3q-ha-tE6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h2K-yb-kQL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection headerTitle="Libraries We Use" id="OE9-3V-wl7">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="484" id="NnU-4K-GME">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="484"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NnU-4K-GME" id="jJN-9H-eXJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="483"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ML-O6-T6G" customClass="TRZSlideLicenseScrollView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="nWk-s3-z6S" id="ZrF-iH-Aul"/>
-                                                    </connections>
-                                                </scrollView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="nWk-s3-z6S" id="Pz0-ts-fm2"/>
-                            <outlet property="delegate" destination="nWk-s3-z6S" id="x5i-Rv-Saf"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Slide License View" id="gc5-Dc-Fb1"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uRn-sI-H3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Slide License View" id="Hg1-9n-vsG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Soe-YM-3Ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944" y="146"/>
+            <point key="canvasLocation" x="948" y="146"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XYe-02-uyp">

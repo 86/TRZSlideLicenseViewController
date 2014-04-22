@@ -21,10 +21,13 @@
 		2873969519015FAF003C27B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2873967719015FAF003C27B2 /* UIKit.framework */; };
 		2873969D19015FAF003C27B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2873969B19015FAF003C27B2 /* InfoPlist.strings */; };
 		2873969F19015FAF003C27B2 /* TRZSlideLicenseViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2873969E19015FAF003C27B2 /* TRZSlideLicenseViewControllerTests.m */; };
-		287396AB1901608F003C27B2 /* TRZSlideLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287396AA1901608F003C27B2 /* TRZSlideLicenseViewController.m */; };
 		287396AE19016754003C27B2 /* TRZSlideLicenseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 287396AD19016754003C27B2 /* TRZSlideLicenseScrollView.m */; };
 		287396B0190170A1003C27B2 /* TRZLicenseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287396AF190170A1003C27B2 /* TRZLicenseView.xib */; };
 		287396B319017400003C27B2 /* TRZLicenseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 287396B219017400003C27B2 /* TRZLicenseView.m */; };
+		287442C01906C8B90028C785 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 287442BD1906C8B90028C785 /* LICENSE */; };
+		287442C11906C8B90028C785 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 287442BE1906C8B90028C785 /* README.md */; };
+		287442C21906C8B90028C785 /* TRZSlideLicenseViewController.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 287442BF1906C8B90028C785 /* TRZSlideLicenseViewController.podspec */; };
+		287442C81906C9CB0028C785 /* TRZSlideLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287442C71906C9CB0028C785 /* TRZSlideLicenseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,13 +60,16 @@
 		2873969A19015FAF003C27B2 /* TRZSlideLicenseViewControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TRZSlideLicenseViewControllerTests-Info.plist"; sourceTree = "<group>"; };
 		2873969C19015FAF003C27B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2873969E19015FAF003C27B2 /* TRZSlideLicenseViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRZSlideLicenseViewControllerTests.m; sourceTree = "<group>"; };
-		287396A91901608F003C27B2 /* TRZSlideLicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZSlideLicenseViewController.h; sourceTree = "<group>"; };
-		287396AA1901608F003C27B2 /* TRZSlideLicenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZSlideLicenseViewController.m; sourceTree = "<group>"; };
 		287396AC19016754003C27B2 /* TRZSlideLicenseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZSlideLicenseScrollView.h; sourceTree = "<group>"; };
 		287396AD19016754003C27B2 /* TRZSlideLicenseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZSlideLicenseScrollView.m; sourceTree = "<group>"; };
 		287396AF190170A1003C27B2 /* TRZLicenseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRZLicenseView.xib; sourceTree = "<group>"; };
 		287396B119017400003C27B2 /* TRZLicenseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZLicenseView.h; sourceTree = "<group>"; };
 		287396B219017400003C27B2 /* TRZLicenseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZLicenseView.m; sourceTree = "<group>"; };
+		287442BD1906C8B90028C785 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		287442BE1906C8B90028C785 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		287442BF1906C8B90028C785 /* TRZSlideLicenseViewController.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TRZSlideLicenseViewController.podspec; sourceTree = "<group>"; };
+		287442C61906C9CB0028C785 /* TRZSlideLicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZSlideLicenseViewController.h; sourceTree = "<group>"; };
+		287442C71906C9CB0028C785 /* TRZSlideLicenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZSlideLicenseViewController.m; sourceTree = "<group>"; };
 		28D890C11902BB92003792C1 /* Pods-TRZSlideLicenseViewController-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-TRZSlideLicenseViewController-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +100,9 @@
 		2873966719015FAF003C27B2 = {
 			isa = PBXGroup;
 			children = (
+				287442BE1906C8B90028C785 /* README.md */,
+				287442BD1906C8B90028C785 /* LICENSE */,
+				287442BF1906C8B90028C785 /* TRZSlideLicenseViewController.podspec */,
 				287396A819015FBA003C27B2 /* src */,
 				2873967919015FAF003C27B2 /* TRZSlideLicenseViewControllerDemo */,
 				2873969819015FAF003C27B2 /* TRZSlideLicenseViewControllerTests */,
@@ -170,8 +179,8 @@
 		287396A819015FBA003C27B2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				287396A91901608F003C27B2 /* TRZSlideLicenseViewController.h */,
-				287396AA1901608F003C27B2 /* TRZSlideLicenseViewController.m */,
+				287442C61906C9CB0028C785 /* TRZSlideLicenseViewController.h */,
+				287442C71906C9CB0028C785 /* TRZSlideLicenseViewController.m */,
 				287396AC19016754003C27B2 /* TRZSlideLicenseScrollView.h */,
 				287396AD19016754003C27B2 /* TRZSlideLicenseScrollView.m */,
 				287396B119017400003C27B2 /* TRZLicenseView.h */,
@@ -258,10 +267,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				287442C11906C8B90028C785 /* README.md in Resources */,
 				2873968C19015FAF003C27B2 /* Images.xcassets in Resources */,
 				287396B0190170A1003C27B2 /* TRZLicenseView.xib in Resources */,
 				2873967E19015FAF003C27B2 /* InfoPlist.strings in Resources */,
+				287442C21906C8B90028C785 /* TRZSlideLicenseViewController.podspec in Resources */,
 				2873968719015FAF003C27B2 /* Main.storyboard in Resources */,
+				287442C01906C8B90028C785 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,9 +293,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2873968019015FAF003C27B2 /* main.m in Sources */,
+				287442C81906C9CB0028C785 /* TRZSlideLicenseViewController.m in Sources */,
 				287396B319017400003C27B2 /* TRZLicenseView.m in Sources */,
 				287396AE19016754003C27B2 /* TRZSlideLicenseScrollView.m in Sources */,
-				287396AB1901608F003C27B2 /* TRZSlideLicenseViewController.m in Sources */,
 				2873968A19015FAF003C27B2 /* TRZViewController.m in Sources */,
 				2873968419015FAF003C27B2 /* TRZAppDelegate.m in Sources */,
 			);
