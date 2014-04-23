@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="sZM-9Z-6oW" kind="push" id="g4V-qd-jd1"/>
+                                    <segue destination="sZM-9Z-6oW" kind="push" identifier="pushLicenseView" id="g4V-qd-jd1"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -10,4 +10,6 @@
 
 @interface TRZSlideLicenseScrollView : UIScrollView
 
+- (id)initWithFrame:(CGRect)frame licenses:(NSArray*)licenses;
+
 @end

@@ -11,9 +11,13 @@
 
 @interface TRZSlideLicenseViewController ()
 
+@property (nonatomic) NSArray *licenses;
+
 @end
 
+
 @implementation TRZSlideLicenseViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,16 +32,25 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"podsPlistName:%@", _podsPlistName);
+    if (_podsPlistName) {
+        [self loadPodsPlist];
+    } else {
+        NSLog(@"podsPlistName not specified.");
+    }
     CGRect viewRect;
     if (self.navigationController) {
         viewRect = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height -64);
     } else {
         viewRect = self.view.frame;
     }
-    TRZSlideLicenseScrollView *slideLicenseScrollView = [[TRZSlideLicenseScrollView alloc] initWithFrame:viewRect];
-    slideLicenseScrollView.delegate = self;
-    [self.view addSubview:slideLicenseScrollView];
-    self.navigationController.navigationItem.title = @"Slide License View";
+    if (_licenses) {
+        TRZSlideLicenseScrollView *slideLicenseScrollView = [[TRZSlideLicenseScrollView alloc] initWithFrame:viewRect licenses:_licenses];
+        slideLicenseScrollView.delegate = self;
+        [self.view addSubview:slideLicenseScrollView];
+    } else {
+        NSLog(@"licenses data not found.");
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,6 +113,28 @@
         NSLog(@"fitEdgeTo:tgtPoint:%f", tgtPoint);
         [scrollView scrollRectToVisible:CGRectMake(tgtPoint, scrollView.contentOffset.y, scrollView.frame.size.width, scrollView.frame.size.height) animated:YES];
     }
+}
+
+
+#pragma mark - load Pods plist
+
+- (void)loadPodsPlist {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:_podsPlistName ofType:nil];
+    NSData *plistData = [NSData dataWithContentsOfFile:filePath];
+    NSPropertyListFormat format = NSPropertyListXMLFormat_v1_0;
+    NSError *error;
+    id dict = [NSPropertyListSerialization propertyListWithData:plistData options:(NSPropertyListReadOptions)NSPropertyListImmutable format:&format error:&error];
+    if (!dict) {
+        return;
+    }
+    NSMutableArray *preferenceSpecifiers = [NSMutableArray arrayWithArray:dict[@"PreferenceSpecifiers"]];
+    [preferenceSpecifiers removeObjectAtIndex:0];
+    [preferenceSpecifiers removeLastObject];
+    _licenses = preferenceSpecifiers;
+    //    for (NSDictionary *license in _licenses) {
+    //        NSLog(@"Title:%@", license[@"Title"]);
+    //        NSLog(@"FooterText:%@", license[@"FooterText"]);
+    //    }
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "TRZViewController.h"
+#import "TRZSlideLicenseViewController.h"
 
 @interface TRZViewController ()
 
@@ -24,6 +25,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"pushLicenseView"]) {
+        NSLog(@"prepareForSegue");
+        TRZSlideLicenseViewController *controller = segue.destinationViewController;
+        controller.podsPlistName = @"Pods-TRZSlideLicenseViewController-acknowledgements.plist";
+        controller.navigationItem.title = @"Sample Licenses";
+    }
 }
 
 @end

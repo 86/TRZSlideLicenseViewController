@@ -10,4 +10,6 @@
 
 @interface TRZSlideLicenseViewController : UIViewController <UIScrollViewDelegate>
 
+@property (nonatomic) NSString *podsPlistName;
+
 @end

@@ -18,11 +18,22 @@
 
 @implementation TRZSlideLicenseScrollView
 
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        [self initScrollView];
+    }
+    return self;
+}
+
+- (id)initWithFrame:(CGRect)frame licenses:(NSArray*)licenses {
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+        _licenses = licenses;
         [self initScrollView];
     }
     return self;
@@ -34,10 +45,14 @@
 }
 
 - (void)initScrollView {
-    [self loadLicenses];
+    if (!_licenses) {
+        [self loadLicensesWithPodsPlistName:@"Pods-acknowledgements.plist"];
+    }
     self.pagingEnabled = YES;
+    self.alwaysBounceVertical = YES;
+    self.alwaysBounceHorizontal = YES;
+    self.directionalLockEnabled = YES;
     self.bouncesZoom = NO;
-    
     self.contentSize = CGSizeMake(_licenses.count * self.frame.size.width, self.frame.size.height);
     for (int i = 0; i < _licenses.count; i++) {
         CGRect frame = CGRectMake(self.frame.size.width * i, 0, self.frame.size.width, self.frame.size.height);
@@ -48,8 +63,8 @@
     }
 }
 
-- (void)loadLicenses {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Pods-TRZSlideLicenseViewController-acknowledgements.plist" ofType:nil];
+- (void)loadLicensesWithPodsPlistName:(NSString *)podsPlistName {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:podsPlistName ofType:nil];
     NSData *plistData = [NSData dataWithContentsOfFile:filePath];
     NSPropertyListFormat format = NSPropertyListXMLFormat_v1_0;
     NSError *error;
