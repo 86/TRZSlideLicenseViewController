@@ -32,7 +32,7 @@
     if ([segue.identifier isEqualToString:@"pushLicenseView"]) {
         NSLog(@"prepareForSegue");
         TRZSlideLicenseViewController *controller = segue.destinationViewController;
-        controller.podsPlistName = @"Pods-TRZSlideLicenseViewController-acknowledgements.plist";
+        controller.podsPlistName = @"Pods-acknowledgements.plist";
         controller.navigationItem.title = @"Sample Licenses";
     }
 }
