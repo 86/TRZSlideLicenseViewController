@@ -21,7 +21,7 @@ pod 'TRZSlideLicenseViewController'
 
 ## Usage
 
-#### Stroyboard
+#### Storyboard
 
 1. Add a new view controller to your stroyboard.
 2. Input ``TRZSlideLicenseViewController`` to custom class field in the identity inspector of the view controller.
