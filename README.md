@@ -25,10 +25,10 @@ pod 'TRZSlideLicenseViewController'
 
 1. Add a new view controller to your stroyboard.
 2. Input ``TRZSlideLicenseViewController`` to custom class field in the identity inspector of the view controller.
-3. Connected the view controller to a navigation controller.
+3. Connected the view controller to a parent view controller.
 4. Input a segue identifier in the attributes inspector of the segue settings.
 5. Copy the ``Pods-acknowledgements.plist`` from the Pods directory to the project directory.
-6. Implemented the ``prepareForSegue`` in the view controller class file.
+6. Implemented the ``prepareForSegue`` in the parent view controller class file.
 
 ```objective-c
 #import "TRZSlideLicenseViewController.h"
