@@ -128,8 +128,8 @@
         return;
     }
     NSMutableArray *preferenceSpecifiers = [NSMutableArray arrayWithArray:dict[@"PreferenceSpecifiers"]];
-    [preferenceSpecifiers removeObjectAtIndex:0];
-    [preferenceSpecifiers removeLastObject];
+//    [preferenceSpecifiers removeObjectAtIndex:0];
+//    [preferenceSpecifiers removeLastObject];
     _licenses = preferenceSpecifiers;
     //    for (NSDictionary *license in _licenses) {
     //        NSLog(@"Title:%@", license[@"Title"]);
