@@ -59,6 +59,8 @@
         TRZLicenseView *licenseView = [[TRZLicenseView alloc] initWithFrame:frame];
         licenseView.libTitle.text = _licenses[i][@"Title"];
         licenseView.libText.text = _licenses[i][@"FooterText"];
+        NSString *page = [NSString stringWithFormat:@"%d/%d",i + 1, _licenses.count];
+        licenseView.curPage.text = page;
         [self addSubview:licenseView];
     }
 }

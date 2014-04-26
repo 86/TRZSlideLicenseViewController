@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *libTitle;
 @property (weak, nonatomic) IBOutlet UITextView *libText;
+@property (weak, nonatomic) IBOutlet UILabel *curPage;
 
 @end
