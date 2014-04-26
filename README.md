@@ -3,12 +3,13 @@
 
 **TRZSlideLicenseViewController is a iOS horizontal scroll view controller for displaying the licenses managed by Cocoapods.**
 
+![TRZSlideLicenseViewController.gif](https://www.dropbox.com/s/ewtcqz6g2v0vl48/TRZSlideLicenseViewController.gif)
 
 ## Requirements
 
 iOS 7.0 or later
 
-## Instllation
+## Installation
 
 [CocoaPods](http://cocoapods.org) is the recommended. Add the following line to your `Podfile`:
 
