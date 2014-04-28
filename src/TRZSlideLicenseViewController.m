@@ -12,6 +12,7 @@
 @interface TRZSlideLicenseViewController ()
 
 @property (nonatomic) NSArray *licenses;
+@property (nonatomic) TRZSlideLicenseScrollView *scrolView;
 
 @end
 
@@ -28,25 +29,28 @@
     return self;
 }
 
+- (void)loadView {
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    UIView *contentView = [[UIView alloc] initWithFrame:screenBounds];
+    contentView.backgroundColor = [UIColor whiteColor];
+    self.view = contentView;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    NSLog(@"podsPlistName:%@", _podsPlistName);
+    NSLog(@"controller frame:%@",NSStringFromCGRect(self.view.frame));
+//    NSLog(@"podsPlistName:%@", _podsPlistName);
     if (_podsPlistName) {
         [self loadPodsPlist];
     } else {
         NSLog(@"podsPlistName not specified.");
     }
-    CGRect viewRect;
-    if (self.navigationController) {
-        viewRect = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height -64);
-    } else {
-        viewRect = self.view.frame;
-    }
     if (_licenses) {
-        TRZSlideLicenseScrollView *slideLicenseScrollView = [[TRZSlideLicenseScrollView alloc] initWithFrame:viewRect licenses:_licenses];
+        TRZSlideLicenseScrollView *slideLicenseScrollView = [[TRZSlideLicenseScrollView alloc] initWithFrame:self.view.frame licenses:_licenses];
         slideLicenseScrollView.delegate = self;
+//        slideLicenseScrollView.backgroundColor = [UIColor clearColor];
+        _scrolView = slideLicenseScrollView;
         [self.view addSubview:slideLicenseScrollView];
     } else {
         NSLog(@"licenses data not found.");
@@ -71,14 +75,12 @@
 }
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    NSLog(@"scrollViewWillEndDragging:velocity:%f, offset:%f",velocity.x,targetContentOffset->x);
+//    NSLog(@"scrollViewWillEndDragging:velocity:%f, offset:%f",velocity.x,targetContentOffset->x);
     if (abs(velocity.x) > 1) {
         scrollView.pagingEnabled = NO;
-        NSLog(@"scrollViewPagingDisabled");
     } else if (velocity.x == 0) {
         if (!scrollView.pagingEnabled) {
             scrollView.pagingEnabled = YES;
-            NSLog(@"scrollViewPagingEnabled");
         }
     }
 }
@@ -92,10 +94,9 @@
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    NSLog(@"scrollViewDidEndDecelerating:%f",scrollView.contentOffset.x);
+//    NSLog(@"scrollViewDidEndDecelerating:%f",scrollView.contentOffset.x);
     if (!scrollView.pagingEnabled) {
         scrollView.pagingEnabled = YES;
-        NSLog(@"scrollViewPagingEnabled");
     }
     
     CGFloat endPoint = scrollView.contentOffset.x;
@@ -103,14 +104,14 @@
     int quo = endPoint / width;
     CGFloat mod = fmod(endPoint, width);
     CGFloat tgtPoint;
-    NSLog(@"quo:%d, mod:%f",quo, mod);
+//    NSLog(@"quo:%d, mod:%f",quo, mod);
     if (mod) {
         if (mod > width / 2) {
             tgtPoint = width * (quo + 1);
         } else {
             tgtPoint = width * quo;
         }
-        NSLog(@"fitEdgeTo:tgtPoint:%f", tgtPoint);
+//        NSLog(@"fitEdgeTo:tgtPoint:%f", tgtPoint);
         [scrollView scrollRectToVisible:CGRectMake(tgtPoint, scrollView.contentOffset.y, scrollView.frame.size.width, scrollView.frame.size.height) animated:YES];
     }
 }

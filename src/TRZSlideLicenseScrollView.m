@@ -40,7 +40,7 @@
 }
 
 - (void)awakeFromNib {
-//    NSLog(@"awakeFromNib");
+//    NSLog(@"SV:awakeFromNib");
     [self initScrollView];
 }
 
@@ -53,15 +53,18 @@
     self.alwaysBounceHorizontal = YES;
     self.directionalLockEnabled = YES;
     self.bouncesZoom = NO;
-    self.contentSize = CGSizeMake(_licenses.count * self.frame.size.width, self.frame.size.height);
+    self.contentSize = CGSizeMake(_licenses.count * self.frame.size.width, self.frame.size.height - 64);
+//    NSLog(@"ScrollView frame:%@",NSStringFromCGRect(self.frame));
+//    NSLog(@"ScrollView.contentSize:%@",NSStringFromCGSize(self.contentSize));
     for (int i = 0; i < _licenses.count; i++) {
-        CGRect frame = CGRectMake(self.frame.size.width * i, 0, self.frame.size.width, self.frame.size.height);
+        CGRect frame = CGRectMake(self.frame.size.width * i, 0, self.frame.size.width, self.frame.size.height - 64);
         TRZLicenseView *licenseView = [[TRZLicenseView alloc] initWithFrame:frame];
         licenseView.libTitle.text = _licenses[i][@"Title"];
         licenseView.libText.text = _licenses[i][@"FooterText"];
-        NSString *page = [NSString stringWithFormat:@"%d/%d",i + 1, _licenses.count];
+        NSString *page = [NSString stringWithFormat:@"%d/%lu",i + 1, (unsigned long)_licenses.count];
         licenseView.curPage.text = page;
         [self addSubview:licenseView];
+//        NSLog(@"LicenselView frame:%@",NSStringFromCGRect(licenseView.frame));
     }
 }
 
