@@ -35,7 +35,6 @@ pod 'TRZSlideLicenseViewController'
 
 ...
 
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"segueIdentifier"]) {
@@ -64,7 +63,7 @@ controller.navigationItem.title = @"Sample Licenses";
 ```
 
 ## Options
-available new feature to change the style of the header and footer page from v0.9.2
+Available new feature to change the style of the header and footer page from v0.9.2
 
 #### TRZSlideLicenseViewHeaderType
 
@@ -85,12 +84,14 @@ available new feature to change the style of the header and footer page from v0.
 #### Examle
 
 ```objective-c
-TRZSlideLicenseViewController *controller = [[TRZSlideLicenseViewController alloc]init];
+...
+
+TRZSlideLicenseViewController *controller = [[TRZSlideLicenseViewController alloc] init];
 controller.podsPlistName = @"Pods-TESTTRZSlideView-acknowledgements.plist";
 controller.navigationItem.title = @"Sample Licenses";
-controller.headerType = TRZSlideLicenseViewHeaderTypeCustom;
 
 // Customize the header title and text
+controller.headerType = TRZSlideLicenseViewHeaderTypeCustom;
 controller.headerTitle = @"Libraries We Use";
 controller.headerText = @"This application makes use of the third party libraries on the following page (➟).\n\nWe thank the open source community for all of their contributions.";
 
