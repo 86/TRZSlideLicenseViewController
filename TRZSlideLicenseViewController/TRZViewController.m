@@ -34,6 +34,10 @@
         TRZSlideLicenseViewController *controller = segue.destinationViewController;
         controller.podsPlistName = @"Pods-acknowledgements.plist";
         controller.navigationItem.title = @"Sample Licenses";
+        controller.headerType = TRZSlideLicenseViewHeaderTypeCustom;
+        controller.headerTitle = @"Libraries We Use";
+        controller.headerText = @"This application makes use of the third party libraries on the following page (➟).\n\nWe thank the open source community for all of their contributions.";
+        controller.footerType = TRZSlideLicenseViewFooterTypeNone;
     }
 }
 

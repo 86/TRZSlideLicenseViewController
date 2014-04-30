@@ -25,8 +25,28 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+//        NSLog(@"initWithNibName");
+        [self initProperty];
     }
     return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if ((self = [super initWithCoder:aDecoder])) {
+//        NSLog(@"initWithCoder");
+        [self initProperty];
+    }
+    return self;
+}
+
+- (void)initProperty {
+    _podsPlistName = @"";
+    _headerType = TRZSlideLicenseViewHeaderTypeDefault;
+    _headerTitle = @"";
+    _headerText = @"";
+    _footerType = TRZSlideLicenseViewFooterTypeDefault;
+    _footerTitle = @"";
+    _footerText = @"";
 }
 
 - (void)loadView {
@@ -39,7 +59,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"controller frame:%@",NSStringFromCGRect(self.view.frame));
+//    NSLog(@"controller frame:%@",NSStringFromCGRect(self.view.frame));
 //    NSLog(@"podsPlistName:%@", _podsPlistName);
     if (_podsPlistName) {
         [self loadPodsPlist];
@@ -49,7 +69,6 @@
     if (_licenses) {
         TRZSlideLicenseScrollView *slideLicenseScrollView = [[TRZSlideLicenseScrollView alloc] initWithFrame:self.view.frame licenses:_licenses];
         slideLicenseScrollView.delegate = self;
-//        slideLicenseScrollView.backgroundColor = [UIColor clearColor];
         _scrolView = slideLicenseScrollView;
         [self.view addSubview:slideLicenseScrollView];
     } else {
@@ -129,13 +148,38 @@
         return;
     }
     NSMutableArray *preferenceSpecifiers = [NSMutableArray arrayWithArray:dict[@"PreferenceSpecifiers"]];
-//    [preferenceSpecifiers removeObjectAtIndex:0];
-//    [preferenceSpecifiers removeLastObject];
+    switch (_headerType) {
+        case TRZSlideLicenseViewHeaderTypeNone:
+//            NSLog(@"TRZSlideLicenseViewHeaderTypeNone");
+            [preferenceSpecifiers removeObjectAtIndex:0];
+            break;
+        case TRZSlideLicenseViewHeaderTypeCustom:
+//            NSLog(@"TRZSlideLicenseViewHeaderTypeCustom");
+            preferenceSpecifiers[0] = @{ @"Title" : _headerTitle, @"FooterText" : _headerText};
+            break;
+        case TRZSlideLicenseViewHeaderTypeDefault:
+//            NSLog(@"TRZSlideLicenseViewHeaderTypeDefault");
+            break;
+    }
+    switch (_footerType) {
+        case TRZSlideLicenseViewFooterTypeNone:
+//            NSLog(@"TRZSlideLicenseViewFooterTypeNone");
+            [preferenceSpecifiers removeLastObject];
+            break;
+        case TRZSlideLicenseViewFooterTypeCustom:
+//            NSLog(@"TRZSlideLicenseViewFooterTypeCustom");
+            preferenceSpecifiers[[preferenceSpecifiers count] - 1] = @{ @"Title" : _footerTitle, @"FooterText" : _footerText};
+            break;
+        case TRZSlideLicenseViewFooterTypeDefault:
+//            NSLog(@"TRZSlideLicenseViewFooterTypeDefault");
+            break;
+    }
+    
     _licenses = preferenceSpecifiers;
-    //    for (NSDictionary *license in _licenses) {
-    //        NSLog(@"Title:%@", license[@"Title"]);
-    //        NSLog(@"FooterText:%@", license[@"FooterText"]);
-    //    }
+//    for (NSDictionary *license in _licenses) {
+//        NSLog(@"Title:%@", license[@"Title"]);
+//        NSLog(@"FooterText:%@", license[@"FooterText"]);
+//    }
 }
 
 @end
