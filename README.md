@@ -63,7 +63,8 @@ controller.navigationItem.title = @"Sample Licenses";
 ```
 
 ## Options
-Available new feature to change the style of the header and footer page from v0.9.2
+
+Available new feature to change the style of the header and footer page from v0.9.2. Set the following value to ``headerType`` or ``footerType`` property of the ``TRZSlideLicenseViewController``.
 
 #### TRZSlideLicenseViewHeaderType
 
@@ -81,7 +82,7 @@ Available new feature to change the style of the header and footer page from v0.
 |``TRZSlideLicenseViewFooterTypeNone``		|Remove the footer page.|
 |``TRZSlideLicenseViewFooterTypeCustom``   |Displays a custom text. Set a text to ``footerTitle``, ``footerText`` of the controller property.|
 
-#### Examle
+#### Example
 
 ```objective-c
 ...
@@ -90,12 +91,12 @@ TRZSlideLicenseViewController *controller = [[TRZSlideLicenseViewController allo
 controller.podsPlistName = @"Pods-TESTTRZSlideView-acknowledgements.plist";
 controller.navigationItem.title = @"Sample Licenses";
 
-// Customize the header title and text
+// Customize the header title and text.
 controller.headerType = TRZSlideLicenseViewHeaderTypeCustom;
 controller.headerTitle = @"Libraries We Use";
 controller.headerText = @"This application makes use of the third party libraries on the following page (➟).\n\nWe thank the open source community for all of their contributions.";
 
-// Remove the footer text
+// Remove the footer page.
 controller.footerType = TRZSlideLicenseViewFooterTypeNone;
 
 [self.navigationController pushViewController:controller animated:YES];
