@@ -18,6 +18,8 @@
 
 @implementation TRZSlideLicenseScrollView
 
+@synthesize titleColor;
+
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -85,6 +87,22 @@
 //        NSLog(@"Title:%@", license[@"Title"]);
 //        NSLog(@"FooterText:%@", license[@"FooterText"]);
 //    }
+}
+
+#pragma mark - Setter
+
+- (void)setTitleColor:(UIColor *)color
+{
+    if (color != titleColor) {
+        titleColor = color;
+        
+        // Update the color of all
+        for (UIView *subview in self.subviews) {
+            if ([subview isKindOfClass:[TRZLicenseView class]]) {
+                [(TRZLicenseView *)subview setTitleColor:titleColor];
+            }
+        }
+    }
 }
 
 @end

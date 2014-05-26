@@ -10,6 +10,11 @@
 
 @interface TRZSlideLicenseScrollView : UIScrollView
 
+/**
+ *  The color of the library titles.
+ */
+@property (strong, nonatomic) UIColor *titleColor;
+
 - (id)initWithFrame:(CGRect)frame licenses:(NSArray*)licenses;
 
 @end

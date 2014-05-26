@@ -19,6 +19,8 @@
 
 @implementation TRZSlideLicenseViewController
 
+@synthesize titleColor;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -69,6 +71,7 @@
     if (_licenses) {
         TRZSlideLicenseScrollView *slideLicenseScrollView = [[TRZSlideLicenseScrollView alloc] initWithFrame:self.view.frame licenses:_licenses];
         slideLicenseScrollView.delegate = self;
+        slideLicenseScrollView.titleColor = self.titleColor;
         _scrolView = slideLicenseScrollView;
         [self.view addSubview:slideLicenseScrollView];
     } else {
@@ -180,6 +183,18 @@
 //        NSLog(@"Title:%@", license[@"Title"]);
 //        NSLog(@"FooterText:%@", license[@"FooterText"]);
 //    }
+}
+
+#pragma mark - Setter
+
+- (void)setTitleColor:(UIColor *)color
+{
+    if (color != titleColor) {
+        titleColor = color;
+        
+        // Update title color of scrollview.
+        self.scrolView.titleColor = color;
+    }
 }
 
 @end

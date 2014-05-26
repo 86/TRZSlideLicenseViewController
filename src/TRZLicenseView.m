@@ -10,6 +10,8 @@
 
 @implementation TRZLicenseView
 
+@synthesize titleColor;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -22,13 +24,16 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+#pragma mark - Setter
+
+- (void)setTitleColor:(UIColor *)color
 {
-    // Drawing code
+    if (color != titleColor) {
+        titleColor = color;
+        
+        // Set the color of the title
+        self.libTitle.textColor = color;
+    }
 }
-*/
 
 @end
