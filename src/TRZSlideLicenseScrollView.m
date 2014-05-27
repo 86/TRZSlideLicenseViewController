@@ -31,7 +31,7 @@
 
 - (void)initScrollView {
     self.pagingEnabled = YES;
-    self.alwaysBounceVertical = YES;
+    self.alwaysBounceVertical = NO;
     self.alwaysBounceHorizontal = YES;
     self.directionalLockEnabled = YES;
     self.bouncesZoom = NO;
