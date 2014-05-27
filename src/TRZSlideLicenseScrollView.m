@@ -19,17 +19,6 @@
 
 @implementation TRZSlideLicenseScrollView
 
-
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-        [self initScrollView];
-    }
-    return self;
-}
-
 - (id)initWithFrame:(CGRect)frame licenses:(NSArray*)licenses {
     self = [super initWithFrame:frame];
     if (self) {
@@ -40,23 +29,13 @@
     return self;
 }
 
-- (void)awakeFromNib {
-//    NSLog(@"SV:awakeFromNib");
-    [self initScrollView];
-}
-
 - (void)initScrollView {
-    if (!_licenses) {
-        [self loadLicensesWithPodsPlistName:@"Pods-acknowledgements.plist"];
-    }
     self.pagingEnabled = YES;
     self.alwaysBounceVertical = YES;
     self.alwaysBounceHorizontal = YES;
     self.directionalLockEnabled = YES;
     self.bouncesZoom = NO;
     self.contentSize = CGSizeMake(_licenses.count * self.frame.size.width, self.frame.size.height - 64);
-//    NSLog(@"ScrollView frame:%@",NSStringFromCGRect(self.frame));
-//    NSLog(@"ScrollView.contentSize:%@",NSStringFromCGSize(self.contentSize));
     NSMutableArray *licenseViews = [NSMutableArray array];
     for (int i = 0; i < _licenses.count; i++) {
         CGRect frame = CGRectMake(self.frame.size.width * i, 0, self.frame.size.width, self.frame.size.height - 64);
@@ -67,29 +46,10 @@
         licenseView.curPage.text = page;
         [self addSubview:licenseView];
         [licenseViews addObject:licenseView];
-//        NSLog(@"LicenselView frame:%@",NSStringFromCGRect(licenseView.frame));
     }
     self.licenseViews = licenseViews;
 }
 
-- (void)loadLicensesWithPodsPlistName:(NSString *)podsPlistName {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:podsPlistName ofType:nil];
-    NSData *plistData = [NSData dataWithContentsOfFile:filePath];
-    NSPropertyListFormat format = NSPropertyListXMLFormat_v1_0;
-    NSError *error;
-    id dict = [NSPropertyListSerialization propertyListWithData:plistData options:(NSPropertyListReadOptions)NSPropertyListImmutable format:&format error:&error];
-    if (!dict) {
-        return;
-    }
-    NSMutableArray *preferenceSpecifiers = [NSMutableArray arrayWithArray:dict[@"PreferenceSpecifiers"]];
-    [preferenceSpecifiers removeObjectAtIndex:0];
-    [preferenceSpecifiers removeLastObject];
-    _licenses = preferenceSpecifiers;
-//    for (NSDictionary *license in _licenses) {
-//        NSLog(@"Title:%@", license[@"Title"]);
-//        NSLog(@"FooterText:%@", license[@"FooterText"]);
-//    }
-}
 
 #pragma mark - Setter
 
