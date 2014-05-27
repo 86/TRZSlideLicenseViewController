@@ -10,10 +10,7 @@
 
 @interface TRZLicenseView : UIView
 
-// Title
 @property (weak, nonatomic) IBOutlet UITextView *libTitle;
-@property (strong, nonatomic) UIColor *titleColor;
-
 @property (weak, nonatomic) IBOutlet UITextView *libText;
 @property (weak, nonatomic) IBOutlet UILabel *curPage;
 

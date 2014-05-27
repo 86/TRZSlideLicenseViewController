@@ -10,8 +10,6 @@
 
 @implementation TRZLicenseView
 
-@synthesize titleColor;
-
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -22,18 +20,6 @@
         [self addSubview:view];
     }
     return self;
-}
-
-#pragma mark - Setter
-
-- (void)setTitleColor:(UIColor *)color
-{
-    if (color != titleColor) {
-        titleColor = color;
-        
-        // Set the color of the title
-        self.libTitle.textColor = color;
-    }
 }
 
 @end

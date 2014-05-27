@@ -12,13 +12,12 @@
 @interface TRZSlideLicenseScrollView ()
 
 @property (nonatomic) NSArray *licenses;
+@property (nonatomic) NSArray *licenseViews;
 
 @end
 
 
 @implementation TRZSlideLicenseScrollView
-
-@synthesize titleColor;
 
 
 - (id)initWithFrame:(CGRect)frame
@@ -58,6 +57,7 @@
     self.contentSize = CGSizeMake(_licenses.count * self.frame.size.width, self.frame.size.height - 64);
 //    NSLog(@"ScrollView frame:%@",NSStringFromCGRect(self.frame));
 //    NSLog(@"ScrollView.contentSize:%@",NSStringFromCGSize(self.contentSize));
+    NSMutableArray *licenseViews = [NSMutableArray array];
     for (int i = 0; i < _licenses.count; i++) {
         CGRect frame = CGRectMake(self.frame.size.width * i, 0, self.frame.size.width, self.frame.size.height - 64);
         TRZLicenseView *licenseView = [[TRZLicenseView alloc] initWithFrame:frame];
@@ -66,8 +66,10 @@
         NSString *page = [NSString stringWithFormat:@"%d/%lu",i + 1, (unsigned long)_licenses.count];
         licenseView.curPage.text = page;
         [self addSubview:licenseView];
+        [licenseViews addObject:licenseView];
 //        NSLog(@"LicenselView frame:%@",NSStringFromCGRect(licenseView.frame));
     }
+    self.licenseViews = licenseViews;
 }
 
 - (void)loadLicensesWithPodsPlistName:(NSString *)podsPlistName {
@@ -93,14 +95,12 @@
 
 - (void)setTitleColor:(UIColor *)color
 {
-    if (color != titleColor) {
-        titleColor = color;
+    if (color != _titleColor) {
+        _titleColor = color;
         
         // Update the color of all
-        for (UIView *subview in self.subviews) {
-            if ([subview isKindOfClass:[TRZLicenseView class]]) {
-                [(TRZLicenseView *)subview setTitleColor:titleColor];
-            }
+        for (TRZLicenseView *licenseView in self.licenseViews) {
+            licenseView.libTitle.textColor = _titleColor;
         }
     }
 }

@@ -19,8 +19,6 @@
 
 @implementation TRZSlideLicenseViewController
 
-@synthesize titleColor;
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -189,8 +187,8 @@
 
 - (void)setTitleColor:(UIColor *)color
 {
-    if (color != titleColor) {
-        titleColor = color;
+    if (color != _titleColor) {
+        _titleColor = color;
         
         // Update title color of scrollview.
         self.scrolView.titleColor = color;
