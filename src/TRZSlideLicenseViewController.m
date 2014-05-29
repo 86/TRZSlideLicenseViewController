@@ -64,7 +64,8 @@
     if (_licenses) {
         TRZSlideLicenseScrollView *slideLicenseScrollView = [[TRZSlideLicenseScrollView alloc] initWithFrame:self.view.frame licenses:_licenses];
         slideLicenseScrollView.delegate = self;
-        slideLicenseScrollView.titleColor = self.titleColor;
+        slideLicenseScrollView.titleColor = _titleColor;
+        slideLicenseScrollView.textColor = _textColor;
         _scrolView = slideLicenseScrollView;
         [self.view addSubview:slideLicenseScrollView];
     } else {
@@ -159,7 +160,17 @@
         _titleColor = color;
         
         // Update title color of scrollview.
-        self.scrolView.titleColor = color;
+        self.scrolView.titleColor = _titleColor;
+    }
+}
+
+- (void)setTextColor:(UIColor *)color
+{
+    if (color != _textColor) {
+        _textColor = color;
+        
+        // Update title color of scrollview.
+        self.scrolView.textColor = _textColor;
     }
 }
 

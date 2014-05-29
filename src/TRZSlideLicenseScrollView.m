@@ -66,4 +66,17 @@
     }
 }
 
+- (void)setTextColor:(UIColor *)color
+{
+    if (color != _textColor) {
+        _textColor = color;
+        
+        // Update the color of all
+        for (TRZLicenseView *licenseView in self.licenseViews) {
+            licenseView.libText.textColor = _textColor;
+            licenseView.curPage.textColor = _textColor;
+        }
+    }
+}
+
 @end

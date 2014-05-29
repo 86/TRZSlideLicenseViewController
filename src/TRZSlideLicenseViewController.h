@@ -35,4 +35,7 @@ typedef NS_ENUM(NSUInteger, TRZSlideLicenseViewFooterType) {
 // Color of the license titles. (Default: Red)
 @property (nonatomic) UIColor *titleColor;
 
+// Color of the license text. (Default: Dark Grey)
+@property (nonatomic) UIColor *textColor;
+
 @end
