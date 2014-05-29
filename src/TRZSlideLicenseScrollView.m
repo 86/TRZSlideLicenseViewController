@@ -41,6 +41,7 @@
         CGRect frame = CGRectMake(self.frame.size.width * i, 0, self.frame.size.width, self.frame.size.height - 64);
         TRZLicenseView *licenseView = [[TRZLicenseView alloc] initWithFrame:frame];
         licenseView.libTitle.text = _licenses[i][@"Title"];
+        [licenseView.libTitle sizeToFit];
         licenseView.libText.text = _licenses[i][@"FooterText"];
         NSString *page = [NSString stringWithFormat:@"%d/%lu",i + 1, (unsigned long)_licenses.count];
         licenseView.curPage.text = page;
