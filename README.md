@@ -1,19 +1,18 @@
 # TRZSlideLicenseViewController
 
 
-**TRZSlideLicenseViewController is a iOS horizontal scroll view controller for displaying the licenses managed by Cocoapods.**
+**TRZSlideLicenseViewController is a iOS horizontal scroll view controller for displaying the licenses managed by CocoaPods.**
 
 ![TRZSlideLicenseViewController.gif](ghassets/TRZSlideLicenseViewController.gif)
 
 ## Requirements
 
-iOS 7.0 or later
+* iOS 7.0 or later
+* [CocoaPods](http://cocoapods.org)
 
 ## Installation
 
-[CocoaPods](http://cocoapods.org) is the recommended. Add the following line to your `Podfile`:
-
-#### Podfile
+Add the following line to your `Podfile`.
 
 ```ruby
 pod 'TRZSlideLicenseViewController'
@@ -21,14 +20,17 @@ pod 'TRZSlideLicenseViewController'
 
 ## Usage
 
+#### Add a Pods-acknowledgements.plist to your project
+
+1. Add a ``Pods-acknowledgements.plist`` from your Pods directory to your project.
+
 #### Loadig a view from a Storyboard
 
 1. Add a new view controller to your storyboard.
 2. Input ``TRZSlideLicenseViewController`` to custom class field in the identity inspector of the view controller.
 3. Make a push segue connection from a source view controller in the navigation controller’s stack to the ``TRZSlideLicenseViewController``.
 4. Input a segue identifier in the attributes inspector of the segue settings.
-5. Copy the ``Pods-acknowledgements.plist`` from the Pods directory to the project directory.
-6. Implemented the ``prepareForSegue`` in the source view controller class file.
+5. Implemente the ``prepareForSegue`` in the source view controller class file.
 
 ```objective-c
 #import "TRZSlideLicenseViewController.h"
@@ -48,8 +50,7 @@ pod 'TRZSlideLicenseViewController'
 
 #### Creating a View Programmatically
 
-1. Copy the ``Pods-acknowledgements.plist`` from the Pods directory to the project directory.
-2. Implemented to a source view controller in the navigation controller’s stack as follows.
+1. Implement to a source view controller in the navigation controller’s stack as follows.
 
 ```objective-c
 #import "TRZSlideLicenseViewController.h"
@@ -64,7 +65,9 @@ controller.navigationItem.title = @"Sample Licenses";
 
 ## Options
 
-Available new feature to change the style of the header and footer page from v0.9.2. Set the following value to ``headerType`` or ``footerType`` property of the ``TRZSlideLicenseViewController``.
+### Cutomize the style of the header and footer page
+
+Set the following value to ``headerType`` or ``footerType`` property of the ``TRZSlideLicenseViewController``.
 
 #### TRZSlideLicenseViewHeaderType
 
@@ -82,7 +85,12 @@ Available new feature to change the style of the header and footer page from v0.
 |``TRZSlideLicenseViewFooterTypeNone``		|Remove the footer page.|
 |``TRZSlideLicenseViewFooterTypeCustom``   |Displays a custom text. Set a text to ``footerTitle``, ``footerText`` of the controller property.|
 
-#### Example
+
+### Customize the title and text color
+
+Set a ``UIColor`` to the ``titleColor`` or ``textColor`` property of the ``TRZSlideLicenseViewController``.
+
+### Example
 
 ```objective-c
 ...
@@ -98,6 +106,12 @@ controller.headerText = @"This application makes use of the third party librarie
 
 // Remove the footer page.
 controller.footerType = TRZSlideLicenseViewFooterTypeNone;
+
+// Customize the colors
+controller.view.backgroundColor = [UIColor darkGrayColor];
+controller.view.tintColor = [UIColor colorWithRed:0.9 green:0.4 blue:0.4 alpha:1.0];
+controller.titleColor = [UIColor whiteColor];
+controller.textColor = [UIColor lightGrayColor];
 
 [self.navigationController pushViewController:controller animated:YES];
 ```
