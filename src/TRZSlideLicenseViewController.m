@@ -83,8 +83,7 @@
 #pragma mark - scrollView delegate
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-//    NSLog(@"scrollViewWillEndDragging:velocity:%f, offset:%f",velocity.x,targetContentOffset->x);
-    if (abs(velocity.x) > 1) {
+    if (fabs(velocity.x) > 1) {
         scrollView.pagingEnabled = NO;
     } else if (velocity.x == 0) {
         if (!scrollView.pagingEnabled) {
@@ -94,7 +93,6 @@
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-//    NSLog(@"scrollViewDidEndDecelerating:%f",scrollView.contentOffset.x);
     if (!scrollView.pagingEnabled) {
         scrollView.pagingEnabled = YES;
     }
@@ -104,14 +102,12 @@
     int quo = endPoint / width;
     CGFloat mod = fmod(endPoint, width);
     CGFloat tgtPoint;
-//    NSLog(@"quo:%d, mod:%f",quo, mod);
     if (mod) {
         if (mod > width / 2) {
             tgtPoint = width * (quo + 1);
         } else {
             tgtPoint = width * quo;
         }
-//        NSLog(@"fitEdgeTo:tgtPoint:%f", tgtPoint);
         [scrollView scrollRectToVisible:CGRectMake(tgtPoint, scrollView.contentOffset.y, scrollView.frame.size.width, scrollView.frame.size.height) animated:YES];
     }
 }
