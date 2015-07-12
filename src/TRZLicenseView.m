@@ -15,7 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"TRZLicenseView" owner:self options:nil] objectAtIndex:0];
+        UIView *view = [[[NSBundle bundleForClass:self.class] loadNibNamed:@"TRZLicenseView" owner:self options:nil] objectAtIndex:0];
         view.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
         [self addSubview:view];
     }
