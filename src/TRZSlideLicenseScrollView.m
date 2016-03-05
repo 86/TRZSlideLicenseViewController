@@ -43,6 +43,7 @@
         licenseView.libTitle.text = _licenses[i][@"Title"];
         [licenseView.libTitle sizeToFit];
         licenseView.libText.text = _licenses[i][@"FooterText"];
+        licenseView.libText.layoutManager.allowsNonContiguousLayout = NO;
         NSString *page = [NSString stringWithFormat:@"%d/%lu",i + 1, (unsigned long)_licenses.count];
         licenseView.curPage.text = page;
         [self addSubview:licenseView];

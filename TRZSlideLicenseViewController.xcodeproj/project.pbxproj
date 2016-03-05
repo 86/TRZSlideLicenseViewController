@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		280B40F01938E00200C50815 /* TRZTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280B40EF1938E00200C50815 /* TRZTableViewController.m */; };
 		2832AED8190C29A400F5935E /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2832AED7190C29A400F5935E /* Pods-acknowledgements.plist */; };
+		286303821C89C615007DA287 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286303811C89C615007DA287 /* LaunchScreen.storyboard */; };
 		2873967419015FAF003C27B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2873967319015FAF003C27B2 /* Foundation.framework */; };
 		2873967619015FAF003C27B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2873967519015FAF003C27B2 /* CoreGraphics.framework */; };
 		2873967819015FAF003C27B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2873967719015FAF003C27B2 /* UIKit.framework */; };
@@ -42,6 +43,7 @@
 		280B40EE1938E00200C50815 /* TRZTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRZTableViewController.h; sourceTree = "<group>"; };
 		280B40EF1938E00200C50815 /* TRZTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRZTableViewController.m; sourceTree = "<group>"; };
 		2832AED7190C29A400F5935E /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		286303811C89C615007DA287 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2873967019015FAF003C27B2 /* SlideLicenses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideLicenses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2873967319015FAF003C27B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2873967519015FAF003C27B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +130,7 @@
 			children = (
 				2832AED7190C29A400F5935E /* Pods-acknowledgements.plist */,
 				28E6DD171B52A5CA00A9CD1E /* Main.storyboard */,
+				286303811C89C615007DA287 /* LaunchScreen.storyboard */,
 				2873968219015FAF003C27B2 /* TRZAppDelegate.h */,
 				2873968319015FAF003C27B2 /* TRZAppDelegate.m */,
 				280B40EE1938E00200C50815 /* TRZTableViewController.h */,
@@ -262,6 +265,7 @@
 				28E6DD191B52A5CA00A9CD1E /* Main.storyboard in Resources */,
 				2873968C19015FAF003C27B2 /* Images.xcassets in Resources */,
 				287396B0190170A1003C27B2 /* TRZLicenseView.xib in Resources */,
+				286303821C89C615007DA287 /* LaunchScreen.storyboard in Resources */,
 				2832AED8190C29A400F5935E /* Pods-acknowledgements.plist in Resources */,
 				2873967E19015FAF003C27B2 /* InfoPlist.strings in Resources */,
 			);
