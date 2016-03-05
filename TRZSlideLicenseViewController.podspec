@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TRZSlideLicenseViewController"
-  s.version      = "0.9.5"
+  s.version      = "0.9.6"
   s.summary      = "iOS horizontal scroll view controller for displaying the licenses"
   s.homepage     = "https://github.com/86/TRZSlideLicenseViewController"
   s.author       = { "86" => "triaedz@gmail.com" }
