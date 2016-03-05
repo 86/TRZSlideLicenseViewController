@@ -83,7 +83,7 @@
 #pragma mark - scrollView delegate
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    if (fabs(velocity.x) > 1) {
+    if (fabs(velocity.x) > 4) {
         scrollView.pagingEnabled = NO;
     } else if (velocity.x == 0) {
         if (!scrollView.pagingEnabled) {
