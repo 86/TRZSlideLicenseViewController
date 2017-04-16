@@ -33,7 +33,7 @@ pod 'TRZSlideLicenseViewController'
 5. Implemente the ``prepareForSegue`` in the source view controller class file.
 
 ```objective-c
-#import "TRZSlideLicenseViewController.h"
+# import "TRZSlideLicenseViewController.h"
 
 ...
 
@@ -53,7 +53,7 @@ pod 'TRZSlideLicenseViewController'
 1. Implement to a source view controller in the navigation controller’s stack as follows.
 
 ```objective-c
-#import "TRZSlideLicenseViewController.h"
+# import "TRZSlideLicenseViewController.h"
 
 ...
 
