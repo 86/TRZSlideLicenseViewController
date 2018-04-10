@@ -62,7 +62,15 @@
         NSLog(@"podsPlistName not specified.");
     }
     if (_licenses) {
-        TRZSlideLicenseScrollView *slideLicenseScrollView = [[TRZSlideLicenseScrollView alloc] initWithFrame:self.view.frame licenses:_licenses];
+        CGRect frame = self.view.frame;
+        
+        if (@available(iOS 11.0, *)) {
+            UIWindow *window = UIApplication.sharedApplication.keyWindow;
+            UILayoutGuide *guide = window.safeAreaLayoutGuide;
+            frame = guide.layoutFrame;
+        }
+        
+        TRZSlideLicenseScrollView *slideLicenseScrollView = [[TRZSlideLicenseScrollView alloc] initWithFrame:frame licenses:_licenses];
         slideLicenseScrollView.delegate = self;
         slideLicenseScrollView.titleColor = _titleColor;
         slideLicenseScrollView.textColor = _textColor;
